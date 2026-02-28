@@ -1,0 +1,64 @@
+<!-- Hospital Dashboard Layout -->
+
+<div class="dashboard">
+
+  <!-- Sidebar -->
+
+  <aside class="sidebar">
+
+
+<div class="sidebar-header">
+  <h1>🏥 AKR</h1>
+  <h3>Hospital Management</h3>
+</div>
+
+<nav class="sidebar-nav">
+
+  <button
+    class="nav-item active"
+    id="nav-appointments"
+    (click)="navClick('appointments')"
+  >
+    📅 Appointments
+  </button>
+
+  <button
+    class="nav-item"
+    id="nav-doctors"
+    (click)="navClick('doctors')"
+  >
+    🩺 Doctors
+  </button>
+
+  <button
+    class="nav-item"
+    id="nav-patients"
+    (click)="navClick('patients')"
+  >
+    👤 Patients
+  </button>
+
+</nav>
+
+
+  </aside>
+
+  <!-- Main Content -->
+
+  <main class="main-content">
+
+
+<!-- Top Header -->
+<header class="topbar">
+  <h1>AKR Hospital Management System</h1>
+</header>
+
+<!-- Routed Pages -->
+<section class="content-area">
+  <router-outlet></router-outlet>
+</section>
+
+
+  </main>
+
+</div>

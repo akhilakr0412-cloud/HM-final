@@ -1,0 +1,234 @@
+/* ===== Page Background ===== */
+
+.doctors-page {
+min-height: 100vh;
+background: url("https://images.unsplash.com/photo-1576091160550-2173dba999ef")
+no-repeat center center / cover;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+/* Dark overlay for readability */
+
+.overlay {
+width: 100%;
+min-height: 100vh;
+background: rgba(0, 0, 0, 0.65);
+padding: 2rem;
+}
+
+/* Layout */
+
+.content-wrapper {
+display: flex;
+gap: 2rem;
+justify-content: center;
+align-items: flex-start;
+flex-wrap: wrap;
+}
+
+/* ===== Form Card ===== */
+
+.form-card {
+background: linear-gradient(135deg, #fff5f5, #ffe4e6);
+padding: 2rem;
+border-radius: 1rem;
+width: 100%;
+max-width: 420px;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.form-card h2 {
+text-align: center;
+color: #b91c1c;
+margin-bottom: 1.5rem;
+}
+
+/* Form */
+
+.form-group {
+margin-bottom: 1.2rem;
+}
+
+label {
+display: block;
+font-weight: 600;
+margin-bottom: 0.4rem;
+color: #7f1d1d;
+}
+
+label.required::after {
+content: " *";
+color: red;
+}
+
+/* Inputs */
+
+input,
+select {
+width: 100%;
+padding: 0.7rem;
+border-radius: 0.5rem;
+border: 1px solid #fecaca;
+background: #fff;
+transition: 0.2s;
+}
+
+input:focus,
+select:focus {
+outline: none;
+border-color: #dc2626;
+box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.2);
+}
+
+/* ===== Buttons ===== */
+
+.btn-group {
+display: flex;
+gap: 0.7rem;
+justify-content: flex-end;
+margin-top: 1.5rem;
+}
+
+.btn {
+padding: 0.6rem 1.3rem;
+border: none;
+border-radius: 0.5rem;
+font-weight: 600;
+cursor: pointer;
+transition: 0.2s;
+}
+
+/* Add */
+
+.add-btn {
+background: #dc2626;
+color: white;
+}
+
+.add-btn:hover {
+background: #b91c1c;
+}
+
+/* Update */
+
+.update-btn {
+background: #ea580c;
+color: white;
+}
+
+.update-btn:hover {
+background: #c2410c;
+}
+
+/* Cancel */
+
+.cancel-btn {
+background: #6b7280;
+color: white;
+}
+
+.cancel-btn:hover {
+background: #4b5563;
+}
+
+/* ===== Table Card ===== */
+
+.table-card {
+background: #ffffffee;
+backdrop-filter: blur(6px);
+border-radius: 1rem;
+padding: 1.5rem;
+min-width: 500px;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.table-card h2 {
+text-align: center;
+color: #b91c1c;
+margin-bottom: 1rem;
+}
+
+/* Table */
+
+table {
+width: 100%;
+border-collapse: collapse;
+}
+
+/* Header */
+
+thead {
+background: #b91c1c;
+color: white;
+}
+
+th,
+td {
+padding: 0.8rem;
+text-align: left;
+}
+
+/* Rows */
+
+tbody tr {
+border-bottom: 1px solid #e5e7eb;
+}
+
+tbody tr:hover {
+background: #fee2e2;
+}
+
+/* Action buttons */
+
+.action-btn {
+padding: 0.35rem 0.8rem;
+border: none;
+border-radius: 0.4rem;
+margin-right: 0.4rem;
+cursor: pointer;
+font-weight: 600;
+}
+
+/* Edit */
+
+.edit-btn {
+background: #facc15;
+}
+
+.edit-btn:hover {
+background: #eab308;
+}
+
+/* Delete */
+
+.delete-btn {
+background: #dc2626;
+color: white;
+}
+
+.delete-btn:hover {
+background: #b91c1c;
+}
+
+/* Empty */
+
+.empty {
+text-align: center;
+padding: 2rem;
+color: #6b7280;
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 900px) {
+.content-wrapper {
+flex-direction: column;
+align-items: center;
+}
+
+.table-card {
+min-width: 100%;
+}
+}
