@@ -15,7 +15,7 @@ app.use(cors());
 app.use(express.json());
 
 // ✅ FIXED Mongo URI
-const MONGO_URI = "mongodb://127.0.0.1:27017/hospitalDB";
+const MONGO_URI = "mongodb+srv://akhilakr0412_db_user:G8OspqviJDZt62uL@cluster0.cwijgvd.mongodb.net/?appName=Cluster0";
 
 // Connect to MongoDB
 mongoose.connect(MONGO_URI)
@@ -28,6 +28,13 @@ mongoose.connect(MONGO_URI)
 app.use("/api/patient", patientRoutes);
 app.use("/api/doctor", doctorRoutes);
 app.use("/api/appointment", appointmentRoutes);
+app.use('/health', (req, res) => {
+  res.status(200).json({
+    status: 'UP',
+    message: 'Server is running',
+    timestamp: new Date()
+  });
+});
 
 // Start server
 app.listen(PORT, () => {
