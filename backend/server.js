@@ -28,6 +28,13 @@ mongoose.connect(MONGO_URI)
 app.use("/api/patient", patientRoutes);
 app.use("/api/doctor", doctorRoutes);
 app.use("/api/appointment", appointmentRoutes);
+app.use('/health', (req, res) => {
+  res.status(200).json({
+    status: 'UP',
+    message: 'Server is running',
+    timestamp: new Date()
+  });
+});
 
 // Start server
 app.listen(PORT, () => {
